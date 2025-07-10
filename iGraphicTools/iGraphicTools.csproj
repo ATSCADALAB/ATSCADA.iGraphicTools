@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A983195F-403D-48FC-B8EA-FA5564EDAEB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATSCADA.iGraphicTools</RootNamespace>
+    <AssemblyName>iGraphicTools</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="iDriver">
+      <HintPath>..\..\..\..\..\..\Program Files\ATPro\ATSCADA\iDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ToolExtensions, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\ATPro\ATSCADA\ToolExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimateGauge\Drawable\CircularAxis.cs" />
+    <Compile Include="AnimateGauge\Drawable\IDrawable.cs" />
+    <Compile Include="AnimateGauge\Drawable\LabelPosition.cs" />
+    <Compile Include="AnimateGauge\Drawable\Needle.cs" />
+    <Compile Include="AnimateGauge\Drawable\TickPosition.cs" />
+    <Compile Include="AnimateGauge\iAnimateGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AnimateGauge\Utils\CustomExtensions.cs" />
+    <Compile Include="AnimateGauge\Utils\EaseFunction.cs" />
+    <Compile Include="AnimateGauge\Utils\EaseFunctionType.cs" />
+    <Compile Include="AnimateGauge\Utils\EaseMode.cs" />
+    <Compile Include="AnimateGauge\Utils\GraphicsHelper.cs" />
+    <Compile Include="Bar\iHBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bar\iHBar.Designer.cs">
+      <DependentUpon>iHBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bar\iVBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bar\iVBar.Designer.cs">
+      <DependentUpon>iVBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gauge\ColorManager.cs" />
+    <Compile Include="Gauge\iGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gauge\GaugeRenderer.cs" />
+    <Compile Include="Gauge\GaugeThreshold.cs" />
+    <Compile Include="Image\frmImageSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image\frmImageSettings.Designer.cs">
+      <DependentUpon>frmImageSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image\frmImage3PosSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image\frmImage3PosSettings.Designer.cs">
+      <DependentUpon>frmImage3PosSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image\frmPushSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image\frmPushSettings.Designer.cs">
+      <DependentUpon>frmPushSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image\frmSwitchSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image\frmSwitchSettings.Designer.cs">
+      <DependentUpon>frmSwitchSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image\iImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Image\iImage3Pos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Image\ImageCommon.cs" />
+    <Compile Include="Image\iImagePush.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Image\iImageSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Led\iLed7Segment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Led\Led7SegementBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Bar\iHBar.resx">
+      <DependentUpon>iHBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bar\iVBar.resx">
+      <DependentUpon>iVBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\frmImageSettings.resx">
+      <DependentUpon>frmImageSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\frmImage3PosSettings.resx">
+      <DependentUpon>frmImage3PosSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\frmPushSettings.resx">
+      <DependentUpon>frmPushSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\frmSwitchSettings.resx">
+      <DependentUpon>frmSwitchSettings.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
