@@ -32,6 +32,10 @@ namespace WindowsFormsApp1
             this.iDriver1 = new ATSCADA.iDriver();
             this.SuspendLayout();
             // 
+            // iVBarEnhanced1
+            // 
+            
+            // 
             // iDriver1
             // 
             this.iDriver1.Designmode = false;
@@ -44,7 +48,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 299);
+            this.ClientSize = new System.Drawing.Size(771, 673);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -52,7 +56,6 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-
         private ATSCADA.iDriver iDriver1;
     }
 }

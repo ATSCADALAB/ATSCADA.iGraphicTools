@@ -72,6 +72,12 @@
     <Compile Include="Bar\iHBar.Designer.cs">
       <DependentUpon>iHBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bar\iVBarEnhanced.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bar\iVBarEnhanced.Designer.cs">
+      <DependentUpon>iVBarEnhanced.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bar\iVBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +139,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Bar\iHBar.resx">
       <DependentUpon>iHBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bar\iVBarEnhanced.resx">
+      <DependentUpon>iVBarEnhanced.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bar\iVBar.resx">
       <DependentUpon>iVBar.cs</DependentUpon>
