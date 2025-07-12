@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="iAgaugeTools">
+      <HintPath>H:\ATSCADA_V4.0.0.5\ATSCADA_V4.0.0.5\ATPro\ATSCADA\iAgaugeTools\iAgaugeTools.dll</HintPath>
+    </Reference>
     <Reference Include="iDriver">
       <HintPath>C:\Program Files\ATPro\ATSCADA\iDriver.dll</HintPath>
     </Reference>

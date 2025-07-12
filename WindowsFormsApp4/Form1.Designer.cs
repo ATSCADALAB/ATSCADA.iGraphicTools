@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.iDriver1 = new ATSCADA.iDriver();
-            this.iVBarEnhanced1 = new ATSCADA.iGraphicTools.Bar.iVBarEnhanced();
+            this.iVBar1 = new ATSCADA.iGraphicTools.Bar.iVBar();
             this.SuspendLayout();
             // 
             // iDriver1
@@ -40,37 +40,34 @@
             this.iDriver1.ProjectFile = null;
             this.iDriver1.WaitingTime = 3000;
             // 
-            // iVBarEnhanced1
+            // iVBar1
             // 
-            this.iVBarEnhanced1.BackColor = System.Drawing.Color.Transparent;
-            this.iVBarEnhanced1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.iVBarEnhanced1.BarWidth = 0;
-            this.iVBarEnhanced1.Driver = this.iDriver1;
-            this.iVBarEnhanced1.HighColor = System.Drawing.Color.Red;
-            this.iVBarEnhanced1.InverseDirect = false;
-            this.iVBarEnhanced1.LeftMargin = 0;
-            this.iVBarEnhanced1.Location = new System.Drawing.Point(346, 122);
-            this.iVBarEnhanced1.LowColor = System.Drawing.Color.LightBlue;
-            this.iVBarEnhanced1.Name = "iVBarEnhanced1";
-            this.iVBarEnhanced1.NormalColor = System.Drawing.Color.Blue;
-            this.iVBarEnhanced1.ScaleFontSize = 8F;
-            this.iVBarEnhanced1.ScaleSteps = 8;
-            this.iVBarEnhanced1.ScaleTextColor = System.Drawing.Color.LightGray;
-            this.iVBarEnhanced1.ShowScale = true;
-            this.iVBarEnhanced1.Size = new System.Drawing.Size(120, 200);
-            this.iVBarEnhanced1.TabIndex = 0;
-            this.iVBarEnhanced1.TagHigh = "Location1.NhietCao";
-            this.iVBarEnhanced1.TagLow = null;
-            this.iVBarEnhanced1.TagMax = "\"100\"";
-            this.iVBarEnhanced1.TagMin = "\"10\"";
-            this.iVBarEnhanced1.TagName = "Location1.NhietDo";
+            this.iVBar1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.iVBar1.Driver = this.iDriver1;
+            this.iVBar1.FillColor = System.Drawing.Color.Green;
+            this.iVBar1.HighColor = System.Drawing.Color.Red;
+            this.iVBar1.HighThresholdLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iVBar1.InverseDirect = false;
+            this.iVBar1.Location = new System.Drawing.Point(122, 28);
+            this.iVBar1.LowColor = System.Drawing.Color.Yellow;
+            this.iVBar1.LowThresholdLineColor = System.Drawing.Color.Blue;
+            this.iVBar1.Name = "iVBar1";
+            this.iVBar1.NormalColor = System.Drawing.Color.Green;
+            this.iVBar1.ShowThresholdLines = true;
+            this.iVBar1.Size = new System.Drawing.Size(224, 368);
+            this.iVBar1.TabIndex = 0;
+            this.iVBar1.TagHigh = "Location1.NhietCao";
+            this.iVBar1.TagLow = "Location1.NhietThap";
+            this.iVBar1.TagMax = "\"1000\"";
+            this.iVBar1.TagMin = "\"0\"";
+            this.iVBar1.TagName = "Location1.NhietDo";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.iVBarEnhanced1);
+            this.Controls.Add(this.iVBar1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -80,7 +77,7 @@
         #endregion
 
         private ATSCADA.iDriver iDriver1;
-        private ATSCADA.iGraphicTools.Bar.iVBarEnhanced iVBarEnhanced1;
+        private ATSCADA.iGraphicTools.Bar.iVBar iVBar1;
     }
 }
 
